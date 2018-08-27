@@ -1,0 +1,45 @@
+geometry_msgs/Pose[] poses
+
+sensor_msgs/JointState[] joint_states
+geometry_msgs/Pose robot_pose
+
+float64 unknown_score
+float64 occupied_score
+
+float64 distance_weight
+float64 absolute_weight
+
+bool with_images
+bool with_color
+bool with_clouds
+bool enable_lighting
+
+uint32 width
+uint32 height
+float32 focal_x
+float32 focal_y
+float32 center_x
+float32 center_y
+float32 range_min
+float32 range_max
+
+uint32 filter_type
+  uint32 FILTER_TYPE_NONE = 0
+  uint32 FILTER_TYPE_SPHERE = 1
+  uint32 FILTER_TYPE_BBOX = 2
+  # for FILTER_TYPE_SPHERE: 4 elements (center_x, center_y, center_z, radius)
+  # for FILTER_TYPE_BBOX: 6 elements (min_x,min_y,min_z,max_x,max_y,max_z)
+  float32[] filter_data
+
+uint32 input_filter_type
+  float32[] input_filter_data
+---
+float64[] scores
+float64[] occupied
+float64[] unknown
+float64[] out_of_range
+
+sensor_msgs/Image[] images
+sensor_msgs/PointCloud2[] clouds
+---
+

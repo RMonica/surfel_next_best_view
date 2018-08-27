@@ -1,0 +1,11 @@
+<launch>
+
+  <node pkg="surfel_next_best_view" type="surfel_next_best_view" name="surfel_next_best_view" output="screen" clear_params="true" >
+  </node>
+
+  <node pkg="surfel_next_best_view" type="surfel_next_best_view_test" name="surfel_next_best_view_test" output="screen" >
+    <param name="cloud_filename" type="string" value="$(find surfel_next_best_view)/data/pointcloud.pcd" />
+  </node>
+
+</launch>
+
