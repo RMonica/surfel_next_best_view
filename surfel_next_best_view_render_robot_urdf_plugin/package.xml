@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>surfel_next_best_view_render_robot_urdf_plugin</name>
+  <version>0.0.0</version>
+  <description>The surfel_next_best_view_render_robot_urdf_plugin package</description>
+
+  <maintainer email="rimlab@todo.todo">rimlab</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>surfel_next_best_view</build_depend>
+  <build_depend>moveit</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>moveit_core</build_depend>
+  <build_depend>moveit_ros_planning_interface</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>urdf</build_depend>
+  <build_export_depend>surfel_next_best_view</build_export_depend>
+  <build_export_depend>pluginlib</build_export_depend>
+  <build_export_depend>moveit</build_export_depend>
+  <build_export_depend>moveit_core</build_export_depend>
+  <build_export_depend>moveit_ros_planning_interface</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>urdf</build_export_depend>
+  <exec_depend>surfel_next_best_view</exec_depend>
+  <exec_depend>pluginlib</exec_depend>
+  <exec_depend>moveit</exec_depend>
+  <exec_depend>moveit_core</exec_depend>
+  <exec_depend>moveit_ros_planning_interface</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>urdf</exec_depend>
+
+  <export>
+    <surfel_next_best_view plugin="${prefix}/plugin.xml" />
+  </export>
+</package>

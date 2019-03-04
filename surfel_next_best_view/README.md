@@ -2,7 +2,7 @@ Surfel Next Best View
 =====================
 
 The `surfel_next_best_view` ROS package evaluates view poses of a pinhole sensor in a surfel cloud.
-The package contains one main node, `surfel_next_best_view`.
+The main node is `surfel_next_best_view`.
 
 The node operates on a binary surfel cloud, where two kinds of surfels are present.
 Known surfels separate empty from known space, while unknown surfels separate unknown from known space.
@@ -25,7 +25,8 @@ Dependencies
 + GLEW
 + Eigen3
 + X11
-+ init_fake_opengl_context: `https://github.com/RMonica/init_fake_opengl_context`
++ `init_fake_opengl_context`: `https://github.com/RMonica/init_fake_opengl_context`
++ `surfel_next_best_view_render_robot_urdf_plugin`: *optional* dependency to use the robot self filter, from `https://github.com/RMonica/surfel_next_best_view_render_robot_urdf_plugin`
 
 Usage
 -----
@@ -66,7 +67,7 @@ Required fields of `~/evaluate_poses`:
 
 Optional fields of `~/evaluate_poses`:
 
-+ **joint_states,robot_pose**: these are used by a robot plugin to add an occluding robot to the scene. (Robot plugin not available yet)
++ **joint_states,robot_pose**: these are used by a robot plugin to add an occluding robot to the scene.
 + **with_images,with_color,with_clouds,enable_lighting**: these change which fields of the response will be populated (see below).
 + **filter_type,filter_data**: only surfels inside this volume contribute to the score. Surfels outside can still provide occlusions.
 + **input_filter_type,input_filter_data**: as above, but surfels outside the volume are ignored (no occlusions).
@@ -104,8 +105,8 @@ Parameters and default values are listed in `src/surfel_next_best_view_node.h`.
 + **set_point_cloud_topic**: name of the input `point_cloud` topic.
 + **fake_opengl_context_screen**: X screen to be used (usually `:0`).
 + **frame_id**: TF frame id for published clouds
-+ **enable_robot_filter**: whether to enable the robot filter plugin. (Robot plugin not available yet)
-+ **robot_filter_plugin**: name of the plugin.
++ **enable_robot_filter**: whether to enable the robot filter plugin.
++ **robot_filter_plugin**: name of the plugin. By default `RenderRobotURDFPlugin`, from package `surfel_next_best_view_render_robot_urdf_plugin`.
 
 
 

@@ -1,0 +1,5 @@
+<library path="lib/libsurfel_next_best_view_render_robot_urdf_plugin">
+  <class type="RenderRobotURDFPlugin" base_class_type="RenderPlugin">
+    <description>RenderRobotURDFPlugin for surfel_next_best_view.</description>
+  </class>
+</library>
